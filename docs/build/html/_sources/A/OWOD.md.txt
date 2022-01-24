@@ -1,12 +1,13 @@
 # OWOD
 
-[OWOD](https://github.com/JosephKJ/OWOD)(Open World Object Detection)
+* [OWOD](https://github.com/JosephKJ/OWOD)(Open World Object Detection)
 
-[paper](https://arxiv.org/abs/2103.02603)
-
-Detect both known and unknown objects
+* [paper](https://arxiv.org/abs/2103.02603)
 
 
 ## Detection Tool
 
-### 테스트코드
+Detect both known and unknown objects
+
+
+
