@@ -18,8 +18,13 @@ Welcome to Youngwoo Shin's documentation!
    :maxdepth: 1
    :caption: Theoretically Intriguing:
 
-   B/b_1.md
-   B/b_2.md
+   B/REOWOD.md
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Projects Participated/led:
+
+   C/patrasche.md
 
 Indices and tables
 ==================
