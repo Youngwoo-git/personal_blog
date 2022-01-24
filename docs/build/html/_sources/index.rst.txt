@@ -8,14 +8,15 @@ Welcome to personal_blog's documentation!
 
 .. toctree::
    :maxdepth: 2
-   :caption: A:
+   :caption: What I have modified:
 
-   A/a_1.md
-   A/a_2.md
+   A/DeepSORT.md
+   A/OWOD.md
+   A/YOLOP.md
 
 .. toctree::
    :maxdepth: 2
-   :caption: B:
+   :caption: Theoretically Intriguing:
 
    B/b_1.md
    B/b_2.md
