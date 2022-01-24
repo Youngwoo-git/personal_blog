@@ -7,7 +7,7 @@ Welcome to personal_blog's documentation!
 =========================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: What I have modified:
 
    A/DeepSORT.md
@@ -15,7 +15,7 @@ Welcome to personal_blog's documentation!
    A/YOLOP.md
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Theoretically Intriguing:
 
    B/b_1.md
