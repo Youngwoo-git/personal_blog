@@ -24,7 +24,7 @@ source_parsers = {
 
 # -- Project information -----------------------------------------------------
 
-project = 'personal_blog'
+project = 'personal researches'
 copyright = '2022, Youngwoo Shin'
 author = 'Youngwoo Shin'
 

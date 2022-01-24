@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to personal_blog's documentation!
+Welcome to Youngwoo Shin's documentation!
 =========================================
 
 .. toctree::
