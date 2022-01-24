@@ -10,8 +10,8 @@ Welcome to personal_blog's documentation!
    :maxdepth: 1
    :caption: What I have modified:
 
-   A/DeepSORT.md
    A/OWOD.md
+   A/DeepSORT.md
    A/YOLOP.md
 
 .. toctree::
