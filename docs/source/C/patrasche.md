@@ -35,14 +35,14 @@ Using *Depth Evaluation* on objects detect potential threat for Patrasche, and u
 
 ## Demo
 
-<img src="/docs/source/_static/patrasche1.png">
+<img src="/_static/patrasche1.png">
 
-<img src="/docs/source/_static/patrasche2.png">
+<img src="/_static/patrasche2.png">
 
-* <span style="color:red">Master Bounding Box</span>.
+* <span style="color:red">Master Bounding Box</span>
 
-* <span style="color:lime">Drivable Area</span>.
+* <span style="color:lime">Drivable Area</span>
 
-* <span style="color:blue">Examination result & Drive/Stop flag</span>.
+* <span style="color:blue">Examination result & Drive/Stop flag</span>
 
-* <span style="color:purple">Examine Area</span>.
+* <span style="color:purple">Examine Area</span>
