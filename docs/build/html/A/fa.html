@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Deep SORT &mdash; personal researches 1.0.0 documentation</title>
+  <title>Face Alignment &mdash; personal researches 1.0.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
@@ -18,8 +18,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="YOLOP" href="YOLOP.html" />
-    <link rel="prev" title="OWOD" href="OWOD.html" /> 
+    <link rel="next" title="Re-OWOD" href="../B/REOWOD.html" />
+    <link rel="prev" title="StyleGAN-NADA" href="StyleGAN_NADA.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -40,13 +40,13 @@
               <p class="caption" role="heading"><span class="caption-text">What I have modified:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="OWOD.html">OWOD</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Deep SORT</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#tracking-tool">Tracking Tool</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="DeepSORT.html">Deep SORT</a></li>
 <li class="toctree-l1"><a class="reference internal" href="YOLOP.html">YOLOP</a></li>
 <li class="toctree-l1"><a class="reference internal" href="StyleGAN_NADA.html">StyleGAN-NADA</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fa.html">Face Alignment</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Face Alignment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#face-detection-tool">Face Detection tool</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Theoretically Intriguing:</span></p>
 <ul>
@@ -72,9 +72,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Deep SORT</li>
+      <li>Face Alignment</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/A/DeepSORT.md.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/A/fa.md.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -82,15 +82,38 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="tex2jax_ignore mathjax_ignore section" id="deep-sort">
-<h1>Deep SORT<a class="headerlink" href="#deep-sort" title="Permalink to this headline"></a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="face-alignment">
+<h1>Face Alignment<a class="headerlink" href="#face-alignment" title="Permalink to this headline"></a></h1>
 <ul class="simple">
-<li><p><a class="reference external" href="https://github.com/mikel-brostrom/Yolov5_DeepSort_Pytorch">Deep SORT</a>(Open World Object Detection)</p></li>
-<li><p><a class="reference external" href="https://arxiv.org/abs/1703.07402">paper</a></p></li>
+<li><p><a class="reference external" href="https://github.com/1adrianb/face-alignment">Face Alignment</a>(Face Recognition)</p></li>
+<li><p><a class="reference external" href="https://www.adrianbulat.com/downloads/FG20/fast_human_pose.pdf">paper</a></p></li>
 </ul>
-<div class="section" id="tracking-tool">
-<h2>Tracking Tool<a class="headerlink" href="#tracking-tool" title="Permalink to this headline"></a></h2>
-<p>Track object, trained for tracking human</p>
+<div class="section" id="face-detection-tool">
+<h2>Face Detection tool<a class="headerlink" href="#face-detection-tool" title="Permalink to this headline"></a></h2>
+<p>Detect face location, and 68 important landmarks on face including eyelashes, eyes, mouth, and nose.</p>
+<p>3 models are porvided:</p>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="text-center head"><p>model</p></th>
+<th class="head"><p>release date</p></th>
+<th class="head"><p>Competitive Edge</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p><strong>dlib</strong></p></td>
+<td><p>2002(updated Mar.2021)</p></td>
+<td><p>more accurate than OpenCV face detection tool</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><strong>blazeface</strong></p></td>
+<td><p>Jul.2019</p></td>
+<td><p>optimized for mobile GPU</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><strong>sfd(s3fd)</strong></p></td>
+<td><p>Aug.2017</p></td>
+<td><p>Optimized for small faces</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 
@@ -98,8 +121,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="OWOD.html" class="btn btn-neutral float-left" title="OWOD" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="YOLOP.html" class="btn btn-neutral float-right" title="YOLOP" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="StyleGAN_NADA.html" class="btn btn-neutral float-left" title="StyleGAN-NADA" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../B/REOWOD.html" class="btn btn-neutral float-right" title="Re-OWOD" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

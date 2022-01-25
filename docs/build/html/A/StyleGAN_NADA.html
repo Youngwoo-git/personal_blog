@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Deep SORT &mdash; personal researches 1.0.0 documentation</title>
+  <title>StyleGAN-NADA &mdash; personal researches 1.0.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
@@ -18,8 +18,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="YOLOP" href="YOLOP.html" />
-    <link rel="prev" title="OWOD" href="OWOD.html" /> 
+    <link rel="next" title="Face Alignment" href="fa.html" />
+    <link rel="prev" title="YOLOP" href="YOLOP.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -40,12 +40,12 @@
               <p class="caption" role="heading"><span class="caption-text">What I have modified:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="OWOD.html">OWOD</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Deep SORT</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#tracking-tool">Tracking Tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DeepSORT.html">Deep SORT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="YOLOP.html">YOLOP</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">StyleGAN-NADA</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#gan-specifically-for-face-generation">GAN, specifically for face generation</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="YOLOP.html">YOLOP</a></li>
-<li class="toctree-l1"><a class="reference internal" href="StyleGAN_NADA.html">StyleGAN-NADA</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fa.html">Face Alignment</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Theoretically Intriguing:</span></p>
@@ -72,9 +72,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Deep SORT</li>
+      <li>StyleGAN-NADA</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/A/DeepSORT.md.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/A/StyleGAN_NADA.md.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -82,15 +82,15 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="tex2jax_ignore mathjax_ignore section" id="deep-sort">
-<h1>Deep SORT<a class="headerlink" href="#deep-sort" title="Permalink to this headline"></a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="stylegan-nada">
+<h1>StyleGAN-NADA<a class="headerlink" href="#stylegan-nada" title="Permalink to this headline"></a></h1>
 <ul class="simple">
-<li><p><a class="reference external" href="https://github.com/mikel-brostrom/Yolov5_DeepSort_Pytorch">Deep SORT</a>(Open World Object Detection)</p></li>
-<li><p><a class="reference external" href="https://arxiv.org/abs/1703.07402">paper</a></p></li>
+<li><p><a class="reference external" href="https://github.com/rinongal/StyleGAN-nada">StyleGAN-NADA</a>(StyleGAN-NADA: CLIP-Guided Domain Adaptation of Image Generators)</p></li>
+<li><p><a class="reference external" href="https://arxiv.org/abs/2108.00946">paper</a></p></li>
 </ul>
-<div class="section" id="tracking-tool">
-<h2>Tracking Tool<a class="headerlink" href="#tracking-tool" title="Permalink to this headline"></a></h2>
-<p>Track object, trained for tracking human</p>
+<div class="section" id="gan-specifically-for-face-generation">
+<h2>GAN, specifically for face generation<a class="headerlink" href="#gan-specifically-for-face-generation" title="Permalink to this headline"></a></h2>
+<p>Use Generator&amp;Discriminator (GAN components) to generate face from input face, which can be aligned</p>
 </div>
 </div>
 
@@ -98,8 +98,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="OWOD.html" class="btn btn-neutral float-left" title="OWOD" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="YOLOP.html" class="btn btn-neutral float-right" title="YOLOP" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="YOLOP.html" class="btn btn-neutral float-left" title="YOLOP" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="fa.html" class="btn btn-neutral float-right" title="Face Alignment" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

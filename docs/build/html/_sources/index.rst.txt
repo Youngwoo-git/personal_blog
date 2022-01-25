@@ -13,12 +13,15 @@ Welcome to Youngwoo Shin's documentation!
    A/OWOD.md
    A/DeepSORT.md
    A/YOLOP.md
+   A/StyleGAN_NADA.md
+   A/fa.md
 
 .. toctree::
    :maxdepth: 1
    :caption: Theoretically Intriguing:
 
    B/REOWOD.md
+   B/JoJoGAN.md
 
 .. toctree::
    :maxdepth: 1
