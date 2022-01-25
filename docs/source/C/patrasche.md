@@ -37,7 +37,9 @@ Using *Depth Evaluation* on objects detect potential threat for Patrasche, and u
 
 <img src="/_static/patrasche1.png">
 
-<img src="/_static/patrasche2.png">
+<img src="/docs/_static/patrasche2.png">
+
+<img src="/docs/source/_static/patrasche2.png">
 
 * <span style="color:red">Master Bounding Box</span>
 
