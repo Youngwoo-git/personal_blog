@@ -2,7 +2,7 @@
 
 ## Overview
 
-Human Specific tracking automobile(***Patrasche***) system on a drivable road
+Human Specific tracking automobile (***Patrasche***) system on a drivable road
 
 ## Main functions
 
@@ -12,7 +12,7 @@ Based on OWOD. Detect all person class object and classify other object as obsta
 
 ### Human Tracking
 
-Based on Deep Sort. Track specific Human figure(***Master***), yet the possiblity of tracking id loss is modified with nearest-distance tracking object algorithm
+Based on Deep Sort. Track specific Human figure (***Master***), yet the possiblity of tracking id loss is modified with nearest-distance tracking object algorithm
 
 In short, nearest-distance tracking object algorithm detect find new tracking object by searching a new human figure with the nearest distance from the location of the most recently tracked human figure.
 
@@ -35,9 +35,9 @@ Using *Depth Evaluation* on objects detect potential threat for Patrasche, and u
 
 ## Demo
 
-<img src="/_static/patrasche1.png">
+<img src="/docs/source/_static/patrasche1.png">
 
-<img src="/_static/patrasche2.png">
+<img src="/docs/source/_static/patrasche2.png">
 
 * <span style="color:red">Master Bounding Box</span>.
 
