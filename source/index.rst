@@ -28,6 +28,7 @@ Welcome to Youngwoo Shin's documentation!
    :caption: Projects Participated/led:
 
    C/patrasche.md
+   C/lpdetection.md
 
 Indices and tables
 ==================
