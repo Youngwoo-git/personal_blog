@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>License Plate Detection &mdash; personal researches 1.0.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> personal researches
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">What I have modified:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../A/OWOD.html">OWOD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../A/DeepSORT.html">Deep SORT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../A/YOLOP.html">YOLOP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../A/StyleGAN_NADA.html">StyleGAN-NADA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../A/fa.html">Face Alignment</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Theoretically Intriguing:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../B/REOWOD.html">Re-OWOD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../B/JoJoGAN.html">JoJoGAN</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Projects Participated/led:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="patrasche.html">Patrasche</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">personal researches</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>License Plate Detection</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/C/lpdetction.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="tex2jax_ignore mathjax_ignore section" id="license-plate-detection">
+<h1>License Plate Detection<a class="headerlink" href="#license-plate-detection" title="Permalink to this headline"></a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"></a></h2>
+<p>Detect License Plate(LP) in a given image or a given frame, and read what is written on there.</p>
+</div>
+<div class="section" id="main-functions">
+<h2>Main functions<a class="headerlink" href="#main-functions" title="Permalink to this headline"></a></h2>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="car-detection">
+<h1>Car Detection<a class="headerlink" href="#car-detection" title="Permalink to this headline"></a></h1>
+<p>Based on YOLOV5, using pre-trained weight yolov5m.pt, detect cars prior to lp detection</p>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="lp-detection">
+<h1>LP Detection<a class="headerlink" href="#lp-detection" title="Permalink to this headline"></a></h1>
+<p>Previously, <a class="reference external" href="http://sergiomsilva.com/pubs/alpr-unconstrained/">WPOD-NET</a> is employeed. To imporove inference rate, the framework changed from tensroflow to ONNX using given utilities.
+Now, such model takes too much of GPU capacity, thus I have used yolov5 instead to detect the location of license plate.</p>
+<p>There are two reasonings behind:</p>
+<ul class="simple">
+<li><p>OCR engine that has been improved through exhaustive effort has been confirmed that even though a detected LP is not aligned, the engine still can read what is written on the plate.</p></li>
+<li><p>As there is certainly a need for running a large batch to inference a video with high quality, the model has to be light with significant efficiency improvement when running in batch</p></li>
+</ul>
+<p>Therefore, Using CCPD2019 dataset, yolov5m is fine-tuned.</p>
+<p>Specifically, blurred images and tillted images are also used for the train and validation process to confirm the performance, monitored by tensorboard</p>
+<p>The detected lps are cropped, and passed to ocr engine for the inference</p>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="ocr">
+<h1>OCR<a class="headerlink" href="#ocr" title="Permalink to this headline"></a></h1>
+<p>Based on <a class="reference external" href="https://arxiv.org/abs/2111.11011">CDistNet</a>, OCR engine is modified for various usage for a given input. By inferencing lps in batch and matching the result with the detected lp location in a specific frame, the program can conclude what lp number have been detected</p>
+<p>As mentioned above, the modified ocr engine can read text even in a not-aligned image given to it.</p>
+<div class="section" id="demo">
+<h2>Demo<a class="headerlink" href="#demo" title="Permalink to this headline"></a></h2>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Youngwoo Shin.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
