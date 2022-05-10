@@ -6,11 +6,11 @@ Detect License Plate(LP) in a given image or a given frame, and read what is wri
 
 ## Main functions
 
-# Car Detection
+### Car Detection
 
 Based on YOLOV5, using pre-trained weight yolov5m.pt, detect cars prior to lp detection
 
-# LP Detection
+### LP Detection
 
 Previously, [WPOD-NET](http://sergiomsilva.com/pubs/alpr-unconstrained/) is employeed. To imporove inference rate, the framework changed from tensroflow to ONNX using given utilities.
 Now, such model takes too much of GPU capacity, thus I have used yolov5 instead to detect the location of license plate.
@@ -25,7 +25,7 @@ Specifically, blurred images and tillted images are also used for the train and 
 
 The detected lps are cropped, and passed to ocr engine for the inference
 
-# OCR
+### OCR
 
 Based on [CDistNet](https://arxiv.org/abs/2111.11011), OCR engine is modified for various usage for a given input. By inferencing lps in batch and matching the result with the detected lp location in a specific frame, the program can conclude what lp number have been detected
 

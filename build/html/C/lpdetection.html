@@ -54,12 +54,12 @@
 <li class="toctree-l1"><a class="reference internal" href="patrasche.html">Patrasche</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">License Plate Detection</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#main-functions">Main functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#main-functions">Main functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#car-detection">Car Detection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lp-detection">LP Detection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ocr">OCR</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="#car-detection">Car Detection</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#lp-detection">LP Detection</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#ocr">OCR</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#demo">Demo</a></li>
 </ul>
 </li>
@@ -97,14 +97,12 @@
 </div>
 <div class="section" id="main-functions">
 <h2>Main functions<a class="headerlink" href="#main-functions" title="Permalink to this headline"></a></h2>
-</div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="car-detection">
-<h1>Car Detection<a class="headerlink" href="#car-detection" title="Permalink to this headline"></a></h1>
+<div class="section" id="car-detection">
+<h3>Car Detection<a class="headerlink" href="#car-detection" title="Permalink to this headline"></a></h3>
 <p>Based on YOLOV5, using pre-trained weight yolov5m.pt, detect cars prior to lp detection</p>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="lp-detection">
-<h1>LP Detection<a class="headerlink" href="#lp-detection" title="Permalink to this headline"></a></h1>
+<div class="section" id="lp-detection">
+<h3>LP Detection<a class="headerlink" href="#lp-detection" title="Permalink to this headline"></a></h3>
 <p>Previously, <a class="reference external" href="http://sergiomsilva.com/pubs/alpr-unconstrained/">WPOD-NET</a> is employeed. To imporove inference rate, the framework changed from tensroflow to ONNX using given utilities.
 Now, such model takes too much of GPU capacity, thus I have used yolov5 instead to detect the location of license plate.</p>
 <p>There are two reasonings behind:</p>
@@ -116,10 +114,12 @@ Now, such model takes too much of GPU capacity, thus I have used yolov5 instead 
 <p>Specifically, blurred images and tillted images are also used for the train and validation process to confirm the performance, monitored by tensorboard</p>
 <p>The detected lps are cropped, and passed to ocr engine for the inference</p>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="ocr">
-<h1>OCR<a class="headerlink" href="#ocr" title="Permalink to this headline"></a></h1>
+<div class="section" id="ocr">
+<h3>OCR<a class="headerlink" href="#ocr" title="Permalink to this headline"></a></h3>
 <p>Based on <a class="reference external" href="https://arxiv.org/abs/2111.11011">CDistNet</a>, OCR engine is modified for various usage for a given input. By inferencing lps in batch and matching the result with the detected lp location in a specific frame, the program can conclude what lp number have been detected</p>
 <p>As mentioned above, the modified ocr engine can read text even in a not-aligned image given to it.</p>
+</div>
+</div>
 <div class="section" id="demo">
 <h2>Demo<a class="headerlink" href="#demo" title="Permalink to this headline"></a></h2>
 </div>
